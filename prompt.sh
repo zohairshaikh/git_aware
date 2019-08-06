@@ -17,9 +17,9 @@ then
                         
                         if [ -e logs/refs/remotes/origin/$i ]
                         then
-                                export PS1='${NORMAL_YELLOW}$(whoami) • ${FOLDER_CYAN}/${PWD##*/}/ → ${GIT_GREEN}$i ✓ ${RESET}$ '
+                                export PS1='\[${NORMAL_YELLOW}$(whoami) • ${FOLDER_CYAN}/${PWD##*/}/ → ${GIT_GREEN}$i ✓ ${RESET}$\] '
                         else
-                                export PS1='${NORMAL_YELLOW}$(whoami) • ${FOLDER_CYAN}/${PWD##*/}/ → ${GIT_GREEN}$i ✗ ${RESET}$ '
+                                export PS1='\[${NORMAL_YELLOW}$(whoami) • ${FOLDER_CYAN}/${PWD##*/}/ → ${GIT_GREEN}$i ✗ ${RESET}$ \]'
                         fi
                         
 
@@ -27,5 +27,5 @@ then
         done;
         cd ..
 else
-        export PS1='${NORMAL_YELLOW}$(whoami) • ${FOLDER_CYAN}/${PWD##*/}/${RESET}$ '
+        export PS1='\[${NORMAL_YELLOW}$(whoami) • ${FOLDER_CYAN}/${PWD##*/}/${RESET}$\] '
 fi;
