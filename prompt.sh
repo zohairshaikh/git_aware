@@ -13,20 +13,18 @@ then
         do
                 ((j++))
                 if [ "$j" = 4 ]
-                then    
-                        echo "asd3"
+                then
                         if [ -e logs/refs/remotes/origin/$i ]
                         then
-                                echo "asd"
                                 export PS1='\[${NORMAL_YELLOW}$(whoami) • ${FOLDER_CYAN}/${PWD##*/}/ → ${GIT_GREEN}$i ✓ ${RESET}$\] '
                         else
-                                echo "asd2"
                                 export PS1='\[${NORMAL_YELLOW}$(whoami) • ${FOLDER_CYAN}/${PWD##*/}/ → ${GIT_GREEN}$i ✗ ${RESET}$ \]'
                         fi
-                        
+
 
                 fi;
         done;
+        cd ..
 else
         export PS1='\[${NORMAL_YELLOW}$(whoami) • ${FOLDER_CYAN}/${PWD##*/}/${RESET}$\] '
 fi;
